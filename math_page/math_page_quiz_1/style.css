@@ -138,7 +138,7 @@ body .question-container .question {
   height: fit-content;
   padding: 8px 0;
   font-size: 0.8rem;
-  margin: 0 auto 15%;
+  margin: 0 auto;
   border-radius: 5px;
   text-align: center;
 }
@@ -189,8 +189,8 @@ body .question-container .button-container {
 }
 body .question-container .button-container button {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 3.2rem;
+  height: 3.2rem;
   border: none;
   background-color: #694714;
   color: #fff;
@@ -200,7 +200,7 @@ body .question-container .button-container button {
 }
 body .question-container .button-container meter {
   width: 50%;
-  height: 8vh;
+  height: 3rem;
   margin-top: 1rem;
 }
 body .question-container.active {
@@ -218,7 +218,6 @@ body .question-container.active {
     margin: 3% auto 0;
   }
   body .question-container .img-container {
-    max-height: 40vh;
     width: 70%;
   }
   body .question-container .answer li {

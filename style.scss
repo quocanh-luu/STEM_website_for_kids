@@ -1,4 +1,4 @@
-@use "../source/reset";
+@use "source/reset";
 
 :root{
     --font-color: #96CEB4;
@@ -18,8 +18,8 @@
     stroke-width: 0.1rem;       //stroke is similar to outline
     stroke-dasharray: $stroke-dash;     //set length of each dash and gap equal to the length of the word
     stroke-dashoffset: $stroke-dash;    //set equal to dasharray so it first start outside the word => invisible
-    animation: appear $animation-duration ease-in-out 1 forwards;
-    @keyframes appear {
+    animation: textAppear $animation-duration ease-in-out 1 forwards;
+    @keyframes textAppear {
         0%{
             stroke-dashoffset: $stroke-dash;
         }
@@ -40,7 +40,7 @@ body{
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background: url(../source/background_in_space.webp);
+    background: url(source/background_in_space.webp);
     background-size: cover;
     background-position: 50%;
     .title{

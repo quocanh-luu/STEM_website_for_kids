@@ -20,7 +20,7 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: url(../source/background_in_space.webp);
+  background: url(source/background_in_space.webp);
   background-size: cover;
   background-position: 50%;
 }
@@ -35,9 +35,9 @@ body .title svg .first {
   stroke-width: 0.1rem;
   stroke-dasharray: var(--first-stroke-dash);
   stroke-dashoffset: var(--first-stroke-dash);
-  animation: appear 6s ease-in-out 1 forwards;
+  animation: textAppear 6s ease-in-out 1 forwards;
 }
-@keyframes appear {
+@keyframes textAppear {
   0% {
     stroke-dashoffset: var(--first-stroke-dash);
   }
@@ -61,9 +61,9 @@ body .title svg .second {
   stroke-width: 0.1rem;
   stroke-dasharray: var(--second-stroke-dash);
   stroke-dashoffset: var(--second-stroke-dash);
-  animation: appear 7s ease-in-out 1 forwards;
+  animation: textAppear 7s ease-in-out 1 forwards;
 }
-@keyframes appear {
+@keyframes textAppear {
   0% {
     stroke-dashoffset: var(--second-stroke-dash);
   }
