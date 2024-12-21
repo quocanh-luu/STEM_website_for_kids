@@ -1,13 +1,8 @@
+@use "../../source/reset";
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
 :root{
     --button-color: rgb(213, 173, 120);
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body{
@@ -17,8 +12,8 @@ body{
         background-color: wheat;
         width: 90%;
         height: fit-content;
-        margin: 10vh 5vw;
-        padding: 10vh 5vw 4vh;
+        margin: 4rem auto;
+        padding: 4rem 1rem 2rem;
         border-radius: 10px;
         text-align: center;
         @mixin text($font-size, $margin){
@@ -26,22 +21,21 @@ body{
             margin-bottom: $margin;
         }
         #header{
-            @include text(8vw, 10vw);
-            //display: none;    
+            @include text(8vw, 10vw);    
         }
         #sub-header{
             @include text(4vw, 5vw);
         }
         img{
-            border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
-            width: 50vw;
-            height: 30vw;
+            border-radius: 0.5rem;
+            width: 60%;
+            aspect-ratio: 5/3;
             mix-blend-mode: difference;
         }
         #start{
             display: block;
-            margin: 3vh auto;
-            padding: 1vh 0;
+            margin: 3rem auto;
+            padding: 0.5rem 0;
             width:  100px;
             border: none;
             border-radius: 5px;
@@ -77,14 +71,14 @@ body{
             }  
         }
         meter{
-            width: 50%;
-            height: 5vw;
+            width: 60%;
+            height: 2rem;
         }
     }
     @media screen and (min-width: 1024px) {
         .container{
             width: 60%;
-            margin: 100px auto;
+            margin: 2rem auto;
             @mixin text($font-size, $margin){
                 font-size: $font-size;
                 margin-bottom: $margin;
@@ -94,10 +88,6 @@ body{
             }
             #sub-header{
                 @include text(2vw, 2.5vw);
-            }
-            img{
-                width: 25vw;
-                height: 15vw;
             }
             #list{
                 .step-container{

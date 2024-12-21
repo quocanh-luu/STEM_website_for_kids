@@ -1,12 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
-:root {
-  --button-color: rgb(213, 173, 120);
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+
+:root {
+  --button-color: rgb(213, 173, 120);
 }
 
 body {
@@ -17,8 +19,8 @@ body .container {
   background-color: wheat;
   width: 90%;
   height: fit-content;
-  margin: 10vh 5vw;
-  padding: 10vh 5vw 4vh;
+  margin: 4rem auto;
+  padding: 4rem 1rem 2rem;
   border-radius: 10px;
   text-align: center;
 }
@@ -31,15 +33,15 @@ body .container #sub-header {
   margin-bottom: 5vw;
 }
 body .container img {
-  border-radius: 10% 50% 10% 50%/50% 10% 50% 10%;
-  width: 50vw;
-  height: 30vw;
+  border-radius: 0.5rem;
+  width: 60%;
+  aspect-ratio: 5/3;
   mix-blend-mode: difference;
 }
 body .container #start {
   display: block;
-  margin: 3vh auto;
-  padding: 1vh 0;
+  margin: 3rem auto;
+  padding: 0.5rem 0;
   width: 100px;
   border: none;
   border-radius: 5px;
@@ -71,13 +73,13 @@ body .container #list .step-container .check-btn.checked {
   background-color: var(--button-color);
 }
 body .container meter {
-  width: 50%;
-  height: 5vw;
+  width: 60%;
+  height: 2rem;
 }
 @media screen and (min-width: 1024px) {
   body .container {
     width: 60%;
-    margin: 100px auto;
+    margin: 2rem auto;
   }
   body .container #header {
     font-size: 4vw;
@@ -86,10 +88,6 @@ body .container meter {
   body .container #sub-header {
     font-size: 2vw;
     margin-bottom: 2.5vw;
-  }
-  body .container img {
-    width: 25vw;
-    height: 15vw;
   }
   body .container #list .step-container .step {
     font-size: 2vw;
