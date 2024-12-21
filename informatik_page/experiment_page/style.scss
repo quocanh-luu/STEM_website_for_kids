@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+:root{
+    --button-color: rgb(213, 173, 120);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Parkinsans", sans-serif;
+    background-color: #282a35;
+    .container{
+        background-color: wheat;
+        width: 90%;
+        height: fit-content;
+        margin: 10vh 5vw;
+        padding: 10vh 5vw 4vh;
+        border-radius: 10px;
+        text-align: center;
+        @mixin text($font-size, $margin){
+            font-size: $font-size;
+            margin-bottom: $margin;
+        }
+        #header{
+            @include text(8vw, 10vw);
+            //display: none;    
+        }
+        #sub-header{
+            @include text(4vw, 5vw);
+        }
+        img{
+            border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
+            width: 50vw;
+            height: 30vw;
+            mix-blend-mode: difference;
+        }
+        #start{
+            display: block;
+            margin: 3vh auto;
+            padding: 1vh 0;
+            width:  100px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--button-color);
+            cursor: pointer;
+        }
+        #start:hover{
+            background-color: rgb(192, 155, 107);
+        }
+        #list{
+            .step-container{
+                .step{
+                    font-size: 4vw;
+                }
+                .step.checked{
+                    opacity: 0.7;
+                    text-decoration: line-through;
+                }
+                .check-btn{
+                    margin-bottom: 5vw;
+                    border-radius: 50%;
+                    width: 7vw;
+                    height: 7vw;
+                    color: #000;
+                    background-color: #fff;
+                    border: none;
+                    cursor: pointer;
+                }
+                .check-btn.checked{
+                    color: #fff;
+                    background-color: var(--button-color);
+                }
+            }  
+        }
+        meter{
+            width: 50%;
+            height: 5vw;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .container{
+            width: 60%;
+            margin: 100px auto;
+            @mixin text($font-size, $margin){
+                font-size: $font-size;
+                margin-bottom: $margin;
+            }
+            #header{
+                @include text(4vw, 5vw);
+            }
+            #sub-header{
+                @include text(2vw, 2.5vw);
+            }
+            img{
+                width: 25vw;
+                height: 15vw;
+            }
+            #list{
+                .step-container{
+                    .step{
+                        font-size: 2vw;
+                    }
+                    .check-btn{
+                        width: 3.5vw;
+                        height: 3.5vw;
+                    }
+                }
+            }
+        }
+    }
+}

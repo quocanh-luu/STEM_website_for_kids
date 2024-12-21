@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Informatik | Die Welt von MINT</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Die Welt von MINT</h1>
+        <nav>
+            <details>
+                <summary>&#9776</summary>
+                <ul>
+                    <li><a href="../homepage/index.html">Home</a></li>
+                    <li><a href="../math_page/index.html">Mathe</a></li>
+                    <li><a class="active" href="#">Informatik</a></li>
+                    <li><a href="#">Naturwissenschaft</a></li>
+                    <li><a href="#">Technik</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+    <main>
+        <div id="typing-text"></div>
+        <button id="game">
+            <a href="experiment_page/" target="_blank">Jetzt probieren!</a>
+        </button>
+        <!--Definition-->
+        <div class="section section-1">
+            <h2>Was ist Programmierung?</h2>
+            <p class="sub-title">Programmieren bedeutet, einem Computer genau zu sagen, was er tun soll. Du schreibst Anweisungen (Code), und der Computer führt sie aus.</p>
+            <p class="explanation">Ein Beispiel: Um einen Computer anzuweisen, ein Bild anzuzeigen, könnte der Code so aussehen:</p>
+            <div class="code-example">
+                <code>ZeigeBild("sun.jpg");</code>
+            </div>
+        </div>
+    
+        <!--Loop-->
+        <div class="section section-2">
+            <h2>Was sind Schleifen?</h2>
+            <p class="sub-title">Eine Schleife wiederholt eine Anweisung immer wieder. Zum Beispiel: Wenn du möchtest, dass der Computer 10 Mal "Hallo" sagt, kannst du eine Schleife verwenden:</p>
+            <div class="code-example">
+                <code>
+                für (i = 1; i <= 10; i++) {<br>
+                    console.log("Hallo");<br>
+                }
+                </code>
+            </div>
+            <p class="explanation">In diesem Beispiel sagt der Computer 10 Mal "Hallo".</p>
+        </div>
+
+        <!--Conditions-->
+        <div class="section section-3">
+            <h2>Was sind Bedingungen?</h2>
+            <p class="sub-title">Mit Bedingungen kannst du dem Computer sagen, dass er nur etwas tun soll, wenn eine bestimmte Bedingung erfüllt ist. Beispiel:</p>
+            <div class="code-example">
+                <code>
+                wenn (alter >= 18) {<br>
+                    console.log("Du darfst Auto fahren!");<br>
+                } sonst {<br>
+                    console.log("Du bist noch zu jung!");<br>
+                }
+                </code>
+            </div>
+            <p class="explanation">Hier prüft der Computer, ob du alt genug bist, um Auto zu fahren.</p>
+        </div>
+        
+        <!--Variable-->
+        <div class="section section-4">
+            <h2>Was sind Variablen?</h2>
+            <p class="sub-title">Variablen sind wie kleine Kisten, in denen du Informationen speichern kannst. Beispiel:</p>
+            <div class="code-example">
+                <code>
+                var alter = 10;<br>
+                var name = "Max";<br>
+                </code>
+            </div>
+            <p class="explanation">In diesem Beispiel speicherst du die Zahl 10 in der Variablen "alter" und den Namen "Max" in der Variablen "name".</p>
+        </div>
+        <div class="section section-5">
+            <h2>Beispiele</h2>
+            <p class="sub-title">Hier möchten wir dir ein Beispiel zeigen, starte es unten mit der Taste und schau, was passiert!</p>
+            <div class="code-example example-1">
+                <code>
+                    window.alert("Hello World")
+                </code>
+            </div>
+            <button id="button-1">Hier klicken</button>
+            <p class="explanation explanation-1">Das Programm unten ist eine einzige Anweisung in der Programmiersprache JavaScript</p>
+            <div class="code-example example-2">
+                <code>
+                    let name = window.prompt("Bitte gib deinen Namen ein.")<br>
+                    window.alert("Hallo " + name)
+                </code>
+            </div>
+            <button id="button-2">Hier klicken</button>
+            <p class="explanation explanation-2">Als nächstes siehst du hier ein etwas komplizierteres Beispiel. Führe es wieder aus, um zu sehen, was dieses Programm macht.</p>
+        </div>
+    </main>
+    
+    <script src="../source/nav.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

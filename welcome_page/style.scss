@@ -1,0 +1,138 @@
+@use "../source/reset";
+
+:root{
+    --font-color: #96CEB4;
+    --first-font-size: 3rem;
+    --first-stroke-dash: 11rem;
+    --second-font-size: 2.8rem;
+    --second-stroke-dash: 11rem;
+    --third-font-size: 4rem;
+    --third-stroke-dash: 14rem;
+}
+//mixin to keep the code DRY
+@mixin text($font-size, $stroke-dash, $animation-duration){
+    font-size: $font-size;
+    font-family: "Londrina Shadow", sans-serif;
+    fill: transparent;
+    stroke: var(--font-color);
+    stroke-width: 0.1rem;       //stroke is similar to outline
+    stroke-dasharray: $stroke-dash;     //set length of each dash and gap equal to the length of the word
+    stroke-dashoffset: $stroke-dash;    //set equal to dasharray so it first start outside the word => invisible
+    animation: appear $animation-duration ease-in-out 1 forwards;
+    @keyframes appear {
+        0%{
+            stroke-dashoffset: $stroke-dash;
+        }
+        10%{
+            fill: transparent;
+        }
+        70%{
+            stroke-dashoffset: 0;
+            fill: var(--font-color);
+        }
+        100%{
+            stroke-dashoffset: $stroke-dash;
+            fill: transparent;
+        }
+    };
+}
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: url(../source/background_in_space.webp);
+    background-size: cover;
+    background-position: 50%;
+    .title{
+        position: relative;
+        svg{
+            .first{
+                @include text(var(--first-font-size), var(--first-stroke-dash), 6s);
+            }
+            .second{
+                @include text(var(--second-font-size), var(--second-stroke-dash), 7s);
+            }
+            .second{
+                animation-delay: 7s;
+            }
+            .third{
+                font-size: var(--third-font-size);
+                font-family: "Londrina Shadow", sans-serif;
+                fill: transparent;
+                stroke: var(--font-color);
+                stroke-width: 0.1rem;
+                stroke-dasharray: var(--third-stroke-dash);
+                stroke-dashoffset: var(--third-stroke-dash);
+                animation: third_appear 6s ease-out 1 forwards;
+                animation-delay: 15s;
+                @keyframes third_appear {
+                    0%{
+                        stroke-dashoffset: var(--third-stroke-dash);
+                        fill: transparent;
+                    }
+                    100%{
+                        fill: var(--font-color);
+                        stroke-dashoffset: 0vw;
+                    }
+                }
+            }
+        }
+        button{
+            opacity: 0;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 16px;
+            background-color: var(--font-color);
+            border: none;
+            padding: 0.5rem 2rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            animation: button-appear 1s linear 1 forwards;
+            animation-delay: 5s;
+            @keyframes button-appear {
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        }
+        button:hover{
+            background-color: #7cae97;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root{
+    --first-font-size: 5.8rem;
+    --first-stroke-dash: 20rem;
+    --second-font-size: 5.5rem;
+    --second-stroke-dash: 20rem;
+    --third-font-size: 8rem;
+    --third-stroke-dash: 27rem;
+    }
+    #first-line{
+        transform: translateY(-2rem);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root{
+        --first-font-size: 7rem;
+        --first-stroke-dash: 25rem;
+        --second-font-size: 6.8rem;
+        --second-stroke-dash: 25rem;
+        --third-font-size: 10rem;
+        --third-stroke-dash: 34rem;
+    }
+    #first-line{
+        transform: translateY(-3rem);
+    }
+}
+
+

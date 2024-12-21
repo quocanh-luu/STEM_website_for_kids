@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homepage | Die Welt von MINT</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Die Welt von MINT</h1>
+        <nav>
+            <details>
+                <summary>&#9776</summary>
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="../math_page/index.html">Mathe</a></li>
+                    <li><a href="../informatik_page/index.html">Informatik</a></li>
+                    <li><a href="#">Naturwissenschaft</a></li>
+                    <li><a href="#">Technik</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+    <main>
+        <div class="hero-section">
+            <div class="container" style="background-color:#FCC737;">
+                <details>    
+                    <summary>M</summary>
+                    <blockquote>
+                        <i> "Mathematik ist die Sprache, in der Gott das Universum geschrieben hat."</i>
+                        <br>Galileo Galilei
+                    </blockquote>
+                </details>
+            </div>
+            <div class="container" style="background-color: #F26B0F;">
+                <details>
+                    <summary>I</summary>
+                    <blockquote>
+                        <i>"Informatik ist kein Fach für Nerds – es ist die Kunst, die Zukunft zu gestalten."</i>
+                        <br>unbekannt
+                    </blockquote>
+                </details>
+            </div>
+            <div class="container" style="background-color: #E73879;">
+                <details>
+                    <summary>N</summary>
+                    <blockquote>
+                        <i>"Wissenschaft ist der Weg, um Wunder zu verstehen."</i>
+                        <br>Carl Sagan
+                    </blockquote>
+                </details>
+            </div>
+            <div class="container" style="background-color: #7E1891;">
+                <details>
+                    <summary>T</summary>
+                    <blockquote>
+                        <i>"Technik ist nichts anderes als die Wissenschaft, Träume wahr werden zu lassen."</i>
+                        <br>Alan Kay
+                    </blockquote>
+                </details>
+            </div>
+        </div>
+    </main>
+    <section class="definition">
+        <svg style="background-color: #282a35;" width="100%" height="10vw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 100 10" preserveAspectRatio="none">
+            <!-- Filled curve -->
+            <path d="M0,-1 C20,-7 60,5 100,-7 L100,0 L0,0 Z" fill="#d9eee1" />
+        </svg>              
+        <div class="mathe">
+            <h1 class="subject">Mathe</h1>
+        </div>
+    </section>
+    <script src="../source/nav.js"></script>
+    <script>
+        //to close the currently opened blockquote
+        const details = [...document.querySelectorAll("details")];
+        details.shift();    //to prevent the navbar from being closed 
+
+        //to accept only one details to be opened at once
+        details.forEach((detail) => {
+            detail.addEventListener("toggle", () => {
+                if (detail.open) {
+                // Close all other <details> elements
+                    details.forEach((otherDetail) => {
+                        if (otherDetail !== detail) {
+                            otherDetail.removeAttribute("open");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

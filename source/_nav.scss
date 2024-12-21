@@ -1,0 +1,75 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    line-height: 4rem;
+    #title{
+        margin: 0 1rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    details{
+        summary{
+            list-style: none;
+            margin: 0 1rem;
+        }
+        ul{
+            list-style: none;
+            width: 100%;
+            height: calc(100vh - 4rem);
+            left: 0;
+            top: 4rem;
+            position: absolute;     //here relative to header element
+            background:url(../source/background_in_space.webp);
+            background-position: 70%;
+            li{
+                text-align: center;
+                border-bottom: 1px solid #fff;
+                a{
+                    display: block;     //to apply width and height
+                    width: 100%;        //so user can click anywhere and not only 
+                    height: 100%;
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1024px){
+        #title{
+            font-size: 2.2rem;
+            margin: 0 2rem;
+        }
+        details{
+            summary{
+                display: none;
+            }
+            ul{
+                top:0;
+                left: 50%;
+                width: 50%;
+                height: 4rem;
+                display: flex;
+                justify-content: space-evenly;
+                background: none;
+                background-color: #fff;
+                li{
+                    a{
+                        color: #000;
+                        transition: transform 0.5s ease;                        }
+                    a:hover{
+                        text-decoration: underline;
+                        transform: translateY(-10%);                        }
+                    a.active{
+                        text-decoration: underline;                        }
+                }                
+            }
+        }   
+    }
+}
