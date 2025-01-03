@@ -126,6 +126,7 @@ main .hero-section .container details blockquote {
 
 .definition {
   position: relative;
+  padding-top: 2rem;
 }
 .definition svg {
   position: absolute;

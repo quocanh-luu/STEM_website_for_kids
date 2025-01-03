@@ -47,6 +47,7 @@ main{
 }
 .definition{
     position: relative;
+    padding-top: 2rem;      //so svg doesnt overlap h1
     svg{
         position: absolute;
         top: 0;
@@ -204,7 +205,6 @@ main{
                 }
             }
             //wavy hover effect
-            //DRY
             @mixin myMixin($translateZ, $rotateY) {
                 transform: translateZ($translateZ) rotateY($rotateY);
             }
@@ -246,7 +246,6 @@ main{
             }
         }
     } 
-
     .definition{
         .mathe, .informatik{
             grid-template-columns: 3fr 2fr;
