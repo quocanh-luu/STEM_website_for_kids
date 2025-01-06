@@ -44,7 +44,7 @@ questions.forEach((question, index) => {
 
     const prevBtn = question.querySelector(".prev");
     prevBtn.addEventListener("click", () =>{
-        const prevQuestionIndex = (index-1+questions.length) % questions.length;     //to come back to first question when it is the last one
+        const prevQuestionIndex = (index-1+questions.length) % questions.length;     //to come back to last question when it is the first one
         const prevQuestion = questions[prevQuestionIndex];
         question.classList.remove("active");
         prevQuestion.classList.add("active");

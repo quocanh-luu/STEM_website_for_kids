@@ -29,7 +29,7 @@ function MoveToNextQuestion(question, index){
     question.classList.remove("active");
     nextQuestion.classList.add("active");
 }
-questions.forEach((question, index) => {
+questions.forEach((question, index) => {            //forEach have 3 Arguments, element, index and array itself
     const nextBtn = question.querySelector(".next");
     nextBtn.addEventListener("click", () =>{
         MoveToNextQuestion(question, index);
@@ -37,14 +37,14 @@ questions.forEach((question, index) => {
 
     const correctAnswer = question.querySelector(".correct");
     correctAnswer.addEventListener("click", () =>{
-        setTimeout(() =>{
+        setTimeout(() =>{           //setTimeout because the congraturation animation
             MoveToNextQuestion(question, index);
         }, 3000);
     });
 
     const prevBtn = question.querySelector(".prev");
     prevBtn.addEventListener("click", () =>{
-        const prevQuestionIndex = (index-1+questions.length) % questions.length;     //to come back to first question when it is the last one
+        const prevQuestionIndex = (index-1+questions.length) % questions.length;     //to come back to last question when it is the first one
         const prevQuestion = questions[prevQuestionIndex];
         question.classList.remove("active");
         prevQuestion.classList.add("active");

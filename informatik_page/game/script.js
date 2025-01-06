@@ -9,7 +9,7 @@ function revealNextStep(){
     ];
 
     if(window.innerWidth < 1024){
-        steps.unshift("If you are on mobile, get the computer and continue");
+        steps.unshift("If you are on mobile, get the computer and continue");       //extra when user is on mobile
     }
 
     const meter = document.querySelector("meter");
@@ -44,8 +44,8 @@ function revealNextStep(){
     meter.value = counter;
     counter++;
 
-    if(counter == 1){
-        startBtn.removeEventListener("click", start);
+    if(counter == 1){       //only allow start-btn to be pressed once 
+        startBtn.removeEventListener("click", revealNextStep);
         startBtn.addEventListener("click", () => {
             window.alert("please check the step when finished!");
         });
@@ -56,7 +56,7 @@ function revealNextStep(){
         btn.forEach(element => {
             element.removeEventListener("click", onClick);
         });
-        checkBtn.addEventListener("click", () => {
+        checkBtn.addEventListener("click", () => {  //add check event to last check button
             checkBtn.classList.add("checked");
             step.classList.add("checked");
             checkBtn.removeEventListener("click", onClick);
