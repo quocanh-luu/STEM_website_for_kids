@@ -10,45 +10,48 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 10vh;
-  width: 100vw;
+  height: 4rem;
+  width: 100%;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   background-color: #fff;
+  line-height: 4rem;
 }
 header #title {
-  margin: 15px 5vw;
+  margin: 0 1rem;
   font-size: 1.5rem;
   font-weight: 700;
 }
 header details summary {
   list-style: none;
-  margin: 20px 5vw;
+  margin: 0 1rem;
 }
 header details ul {
-  z-index: 100;
   list-style: none;
-  width: 100vw;
-  height: 90vh;
+  width: 100%;
+  height: calc(100vh - 4rem);
   left: 0;
-  top: 10vh;
+  top: 4rem;
   position: absolute;
   background: url(../source/background_in_space.webp);
   background-position: 70%;
 }
 header details ul li {
   text-align: center;
-  padding: 20px 0;
   border-bottom: 1px solid #fff;
 }
 header details ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: #fff;
 }
 @media screen and (min-width: 1024px) {
   header #title {
     font-size: 2.2rem;
+    margin: 0 2rem;
   }
   header details summary {
     display: none;
@@ -56,14 +59,12 @@ header details ul li a {
   header details ul {
     top: 0;
     left: 50%;
-    width: 50vw;
-    height: 10vh;
-    padding-top: 10px;
+    width: 50%;
+    height: 4rem;
     display: flex;
     justify-content: space-evenly;
     background: none;
     background-color: #fff;
-    border: none;
   }
   header details ul li a {
     color: #000;
@@ -73,7 +74,7 @@ header details ul li a {
     text-decoration: underline;
     transform: translateY(-10%);
   }
-  header details ul li .active {
+  header details ul li a.active {
     text-decoration: underline;
   }
 }
