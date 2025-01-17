@@ -125,7 +125,7 @@ main{
             padding: 1ch;
         }
     }
-    .section:not(.first){
+    .section:not(:first-of-type){
         margin-top: 4rem;
     }
     .section-5{

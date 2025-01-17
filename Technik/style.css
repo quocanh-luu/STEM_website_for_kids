@@ -1,0 +1,448 @@
+/*Du hast zu viele Media Queries mit verschiedenen Werte und einige überschreiben andere*/
+
+/* Basisreset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    line-height: 4rem;
+}
+
+#title {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header summary {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+header ul {
+    list-style: none;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    left: 0;
+    top: 4rem;
+    position: absolute;
+    background: url(../source/background_in_space.webp);
+    background-position: 70%;
+}
+
+header li {
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+header a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+    #title {
+        font-size: 2.2rem;
+        margin: 0 2rem;
+    }
+
+    header summary {
+        display: none;
+    }
+
+    header ul {
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 4rem;
+        display: flex;
+        justify-content: space-evenly;
+        background: none;
+        background-color: #fff;
+    }
+
+    header a {
+        color: #000;
+        transition: transform 0.5s ease;
+    }
+
+    header a:hover {
+        text-decoration: underline;
+        transform: translateY(-10%);
+    }
+
+    header a.active {
+        text-decoration: underline;
+    }
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 1px;
+}
+
+#Technik-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#Technik {
+    max-width: 200px;
+    max-height: 200px;
+    align-items: center;
+    border: #000 10px;
+    margin-right: 10%;
+}
+
+/* Header */
+.header {
+    margin-top: 4rem; /*place for the navbar*/
+    text-align: center;
+    background-color: #f0f8ff;
+    padding: 20px;
+    font-size: 0.6rem;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    ;
+    ;
+    /* Einzelspalte für kleinere Bildschirme */
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.box,
+.grid-item {
+
+    background-color: #eef;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    word-wrap: break-word;
+    background-color: #FFD700;
+    /* Gold als Grundfarbe */
+    color: #000;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    /* Zeigt an, dass die Box anklickbar ist */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #FFA500;
+    /* Orange beim Hover */
+    transform: scale(1.05);
+    /* Leichtes Vergrößern beim Hover */
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        font-size: 0.9rem;
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Zwei Spalten */
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {
+    .grid-container {
+        grid-template-columns: 2, 2;    /*wrong syntax?*/
+    }
+
+
+}
+
+@media screen and (min-width: 1250px) {
+    .grid-container {
+        grid-template-columns: 2;   /*hier auch*/
+    }
+}
+
+
+
+
+/* Interaktiver Bereich */
+#interactive {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.interactive-box {
+    background-color: #eef;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f8ff;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Tablet und Desktop */
+@media (min-width: 600px) {
+    #hero {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.carousel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    /* Nur aktuelles Slide anzeigen */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track {
+    display: flex;
+    /* Slides nebeneinander anordnen */
+    transition: transform 0.5s ease-in-out;
+    /* Animation für den Übergang */
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    /* Jedes Slide nimmt 100% der Breite ein */
+    text-align: center;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+
+.slide img {
+    width: 30%;
+    height: auto;
+    max-width: 640;
+    max-width: 481;
+    object-fit: cover;
+    /* Stellt sicher, dass das Bild gleichmäßig angezeigt wird */
+
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .slide {
+        width: 90%;
+        /* Breiterer Container für mobile Geräte */
+        max-width: none;
+        /* Entferne Einschränkungen bei der Breite */
+    }
+
+    .slide img {
+        width: 100%;
+        /* Füllt den Container aus */
+        max-width: none;
+        /* Entferne maximale Breite */
+        height: auto;
+        /* Behalte das Seitenverhältnis */
+        border-radius: 8px;
+        /* Kleinere Rundungen */
+    }
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.robo {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: antiquewhite;
+    border: 1px solid grey;
+    border-radius: 8px;
+}
+
+.robo iframe {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+}
+
+.Sensoren {
+    background-color: white;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+    /* Innenabstand */
+    margin: 20px auto;
+    /* Außenabstand und zentrieren */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Leichter Schatten */
+}
+
+.Sensoren h4 {
+    color: darkblue;
+    font-size: larger;
+}
+
+.Sensoren h5 {
+    color: black;
+    font-size: larger;
+}
+
+.dampfmaschine {
+    text-align: center;
+    /* Text zentrieren */
+    margin: 20px auto;
+    /* Zentrierung und Abstand */
+    padding: 20px;
+    /* Innenabstand */
+    max-width: 600px;
+    /* Maximale Breite */
+    background-color: #f9f9f9;
+    /* Heller Hintergrund */
+    border: 2px solid #0073e6;
+    /* Blaue Umrandung */
+    border-radius: 10px;
+    /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Schatteneffekt */
+}
+
+.dampfmaschine-bild {
+    width: 100%;
+    /* Bild skaliert auf die volle Breite */
+    max-width: 400px;
+    /* Begrenzung der Breite */
+    margin-bottom: 20px;
+    /* Abstand zum Knopf */
+}
+
+.machine-container {
+    position: relative;
+    /* Ermöglicht Positionierung von Dampf */
+}
+
+#startSteam {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startSteam:hover {
+    background-color: #005bb5;
+}
+
+#steam {
+    position: absolute;
+    /* Absolute Positionierung über dem Bild */
+    top: -50px;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0);
+    /* Schwarzer Rauch, wirdzu  transparenter Dampf */
+    border-radius: 50%;
+    animation: none;
+}

@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Fredoka", sans-serif;
 }
 
 :root {
@@ -15,7 +14,7 @@ body {
   font-family: "Parkinsans", sans-serif;
   background-color: #282a35;
 }
-body .container {
+.container {
   background-color: wheat;
   width: 90%;
   height: fit-content;
@@ -24,21 +23,21 @@ body .container {
   border-radius: 10px;
   text-align: center;
 }
-body .container #header {
+#header {
   font-size: 8vw;
   margin-bottom: 10vw;
 }
-body .container #sub-header {
+#sub-header {
   font-size: 4vw;
   margin-bottom: 5vw;
 }
-body .container img {
+.container img {
   border-radius: 0.5rem;
   width: 60%;
   aspect-ratio: 5/3;
   mix-blend-mode: difference;
 }
-body .container #start {
+#start {
   display: block;
   margin: 3rem auto;
   padding: 0.5rem 0;
@@ -48,17 +47,17 @@ body .container #start {
   background-color: var(--button-color);
   cursor: pointer;
 }
-body .container #start:hover {
+#start:hover {
   background-color: rgb(192, 155, 107);
 }
-body .container #list .step-container .step {
+.step {
   font-size: 4vw;
 }
-body .container #list .step-container .step.checked {
+.step.checked {
   opacity: 0.7;
   text-decoration: line-through;
 }
-body .container #list .step-container .check-btn {
+.check-btn {
   margin-bottom: 5vw;
   border-radius: 50%;
   width: 7vw;
@@ -68,34 +67,34 @@ body .container #list .step-container .check-btn {
   border: none;
   cursor: pointer;
 }
-body .container #list .step-container .check-btn.checked {
+.check-btn.checked {
   color: #fff;
   background-color: var(--button-color);
 }
-body .container meter {
+meter {
   width: 60%;
   height: 2rem;
 }
 @media screen and (min-width: 1024px) {
-  body .container {
+  .container {
     width: 60%;
     margin: 2rem auto;
   }
-  body .container #header {
+  #header {
     font-size: 4vw;
     margin-bottom: 5vw;
   }
-  body .container #sub-header {
+  #sub-header {
     font-size: 2vw;
     margin-bottom: 2.5vw;
   }
-  body .container #list .step-container .step {
+  .step {
     font-size: 2vw;
   }
-  body .container #list .step-container .check-btn {
+  .check-btn {
     width: 3.5vw;
     height: 3.5vw;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+

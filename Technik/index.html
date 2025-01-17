@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Technik </title>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Die Welt von MINT</h1>
+        <nav>
+            <details>
+                <summary>&#9776</summary>
+                <ul>
+                    <li><a href="../homepage/index.html">Home</a></li>
+                    <li><a href="../math_page/index.html">Mathe</a></li>
+                    <li><a href="../informatik_page/index.html">Informatik</a></li>
+                    <li><a href="../Naturwissenschaft/index.html">Naturwissenschaft</a></li>
+                    <li><a class="active" href="#">Technik</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+
+    <div class="header">
+        <h1>Was ist Technik<br>
+        "Technik hilft uns, Dinge einfacher zu machen – von Maschinen bis zu Robotern!"</h1>
+    </div>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div>
+                <h2>Einführung</h2>
+                <p>Hier kannst du spannende Themen zur Technik entdecken!</p>
+            </div>
+            <div id="Technik-container">
+                <img id="Technik" src="Technik.webp" alt="Technik Bild ">
+            </div>
+        </section>
+
+        <section id="themenbereiche" class="grid-container">
+            <div class="box" id="energy">
+                <h2>Energiequellen</h2>
+                <p style="display: none;">Erfahre, wie wir Energie aus Sonne, Wind und mehr gewinnen!</p>
+            </div>
+            <div class="box" id="robotics">
+                <h2>Roboter</h2>
+                <p style="display: none;">Entdecke, wie Roboter unsere Welt verändern und was sie alles können!</p>
+            </div>
+            <div class="box" id="electronics">
+                <h2>Elektronik</h2>
+                <p style="display: none;">Tauche ein in die Welt der Schaltkreise und elektrischen Geräte!</p>
+            </div>
+            <div class="box" id="machines">
+                <h2>Maschinen</h2>
+                <p style="display: none;">Lerne, wie Maschinen entwickelt und gebaut werden, um Arbeit zu erleichtern.
+                </p>
+            </div>
+        </section>
+
+        <div class="carousel">
+            <!-- Links-Pfeil -->
+            <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+
+            <!-- Galerie-Bereich -->
+            <div class="carousel-track">
+                <div class="slide">
+                    <img src="solar.jpg" alt="Solarenergie">
+                    <h3>Solarenergie</h3>
+                    <p>Die Sonne liefert Energie durch ihre Strahlen, die wir mit Solarzellen nutzen können!</p>
+                </div>
+                <div class="slide">
+                    <img src="wind.jpg" alt="Windenergie">
+                    <h3>Windenergie</h3>
+                    <p>Windräder nutzen die Kraft des Windes, um Strom zu erzeugen.</p>
+                </div>
+                <div class="slide">
+                    <img src="wasser.webp" alt="Wasserkraft">
+                    <h3>Wasserkraft</h3>
+                    <p>Fließendes Wasser in Flüssen und Staudämmen erzeugt Energie.</p>
+                </div>
+                <div class="slide">
+                    <img src="atom.webp" alt="">
+                    <h3>Atom</h3>
+                    <p>Mit Atomenergie können wir viel Strom erzeugen, aber die Entsorgung von Atommüll ist schwierig.
+                    </p>
+                </div>
+                <div class="slide">
+                    <img src="kohle.webp" alt="">
+                    <h3>Kohle</h3>
+                    <p>Kohle wird verbrannt, um Energie zu gewinnen, verursacht aber viele schädliche Emissionen.</p>
+                </div>
+                <div class="slide">
+                    <img src="gas.webp" alt="">
+                    <h3>Gas</h3>
+                    <p>Erdgas ist eine fossile Energiequelle, die weniger CO₂ verursacht als Kohle.</p>
+                </div>
+
+            </div>
+
+            <!-- Rechts-Pfeil -->
+            <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <section class="robo">
+            <h2>Roboter</h2>
+            <iframe src="https://www.youtube.com/embed/tF4DML7FIWk?si=Zoej5Rjd6NoZeUC4&amp;start=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </section>
+
+        <section class="Sensoren">
+            <div>
+                <h4>Sensoren – Kleine Helfer in der Elektronik</h4>
+                <p>Sensoren sind wie die Sinne von Maschinen und Geräten. Sie helfen, Dinge aus der Umwelt zu erkennen
+                    und darauf zu reagieren!</p>
+                <h5>Lichtsensor</h5>
+                <p>Ein Lichtsensor erkennt, wie hell oder dunkel es ist. Zum Beispiel schaltet er Straßenlampen ein,
+                    wenn es dunkel wird.</p>
+                <h5>Schallsensor</h5>
+                <p>Ein Schallsensor hört Geräusche. Er kann zum Beispiel ein Licht einschalten, wenn du in die Hände
+                    klatschst.</p>
+                <h5>Temperatursensor</h5>
+                <p>Ein Temperatursensor fühlt, wie warm oder kalt es ist. Dein Kühlschrank hat einen solchen Sensor,
+                    damit dein Essen schön kühl bleibt.</p>
+            </div>
+        </section>
+
+
+        <section class="dampfmaschine">
+            <h4>Dampfmaschine – Die Kraft des Dampfes</h4>
+            <p>Drücke den Knopf, um zu sehen, wie Dampf aufsteigt!</p>
+            <div class="machine-container">
+                <img src="dampfmaschine.webp" alt="Dampfmaschine" class="dampfmaschine-bild">
+                <button id="startSteam">Dampf aufsteigen lassen</button>
+                <div id="steam"></div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Technik Webseite</p>
+        <nav>
+            <ul>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+
+
+    <script src="script.js" defer></script>
+    <script src="../source/nav.js"></script>
+
+</body>
+
+</html>

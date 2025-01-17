@@ -12,18 +12,19 @@ body {
   position: relative;
   background-color: #96ffbb;
 }
-#flowers-container {
+body #flowers-container {
   position: absolute;
   z-index: 100;
   pointer-events: none;
   opacity: 0;
-  inset: 0;
+  left: 5vw;
+  top: 5vh;
 }
-iframe {
-  width: 100vw;
-  height: 100vh;
+body #flowers-container iframe {
+  width: 90vw;
+  height: 50vw;
 }
-.appear {
+body .appear {
   animation: appear 3s linear 1 forwards;
 }
 @keyframes appear {
@@ -40,7 +41,7 @@ iframe {
     opacity: 0;
   }
 }
-.question-container {
+body .question-container {
   opacity: 0;
   transition: opacity 0.5s ease;
   position: absolute;
@@ -53,13 +54,9 @@ iframe {
   background-color: #F0BB78;
   display: grid;
   grid-template-rows: 50vw 1fr 4fr 1fr;
-  grid-template-areas: 
-  "image" 
-  "question" 
-  "answer" 
-  "button";
+  grid-template-areas: "image" "question" "answer" "button";
 }
-.img-container {
+body .question-container .img-container {
   grid-area: image;
   width: 90%;
   margin: 5% auto;
@@ -73,7 +70,7 @@ iframe {
   color: #fff;
   font-family: "Cabin Sketch", sans-serif;
 }
-.question {
+body .question-container .question {
   grid-area: question;
   background-color: #694714;
   color: #fff;
@@ -85,7 +82,7 @@ iframe {
   border-radius: 5px;
   text-align: center;
 }
-.answer {
+body .question-container .answer {
   grid-area: answer;
   list-style: none;
   display: flex;
@@ -93,7 +90,7 @@ iframe {
   justify-content: center;
   gap: 4vw;
 }
-.answer li {
+body .question-container .answer li {
   cursor: pointer;
   width: 3rem;
   height: 3rem;
@@ -101,7 +98,7 @@ iframe {
   line-height: 3rem;
   border-radius: 5px;
 }
-.false {
+body .question-container .answer .false {
   background-color: grey;
   color: black;
   animation: false 2s linear 1 forwards;
@@ -125,12 +122,12 @@ iframe {
     background-color: initial;
   }
 }
-.button-container {
+body .question-container .button-container {
   grid-area: button;
   display: flex;
   justify-content: space-between;
 }
-.button-container button {
+body .question-container .button-container button {
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -141,64 +138,62 @@ iframe {
   border-radius: 50%;
   margin: 1rem;
 }
-meter {
+body .question-container .button-container meter {
   width: 50%;
   height: 8vh;
   margin-top: 1rem;
 }
-.question-container.active {
+body .question-container.active {
   z-index: 1;
   opacity: 1;
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  .question-container {
+  body .question-container {
     grid-template-rows: 1fr 5fr 3fr 1fr;
-    grid-template-areas: 
-    "question" 
-    "image" 
-    "answer" 
-    "button";
+    grid-template-areas: "question" "image" "answer" "button";
   }
-  .question {
+  body .question-container .question {
     width: 70%;
     margin: 3% auto 0;
   }
-  .img-container {
+  body .question-container .img-container {
     max-height: 40vh;
     width: 70%;
     font-size: 5rem;
   }
-  .answer li {
+  body .question-container .answer li {
     width: 5rem;
     height: 3rem;
     line-height: 3rem;
   }
 }
 @media screen and (min-width: 769px) {
-  .question-container {
+  body .question-container {
     grid-template-columns: 3fr 2fr;
     grid-template-rows: repeat(2, 4fr) 1fr;
     grid-template-areas: "image question" "image answer" "button button";
   }
-  .img-container {
+  body .question-container .img-container {
     height: 70%;
     margin-top: 10%;
     font-size: 6rem;
   }
-  .question {
+  body .question-container .question {
     margin-top: 20%;
     font-size: 1rem;
     padding: 1rem 0;
   }
-  .answer {
+  body .question-container .answer {
     gap: 0;
     width: 90%;
     height: fit-content;
     margin: 0 auto;
     flex-wrap: wrap;
   }
-  .answer li {
+  body .question-container .answer li {
     width: 50%;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    line-height: 4rem;
+}
+
+#title {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header summary {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+header ul {
+    list-style: none;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    left: 0;
+    top: 4rem;
+    position: absolute;
+    background: url(../source/background_in_space.webp);
+    background-position: 70%;
+}
+
+header li {
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+header a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+    #title {
+        font-size: 2.2rem;
+        margin: 0 2rem;
+    }
+
+    header summary {
+        display: none;
+    }
+
+    header ul {
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 4rem;
+        display: flex;
+        justify-content: space-evenly;
+        background: none;
+        background-color: #fff;
+    }
+
+    header a {
+        color: #000;
+        transition: transform 0.5s ease;
+    }
+
+    header a:hover {
+        text-decoration: underline;
+        transform: translateY(-10%);
+    }
+
+    header a.active {
+        text-decoration: underline;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#intro {
+    margin: 1rem;
+    text-align: center;
+
+}
+
+.title {
+    width: 100%;
+    margin-top: 4rem;
+    background: #0073e6;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.box {
+    background-color: #FFD700;
+    color: #000;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    /* Zeigt an, dass die Box anklickbar ist */
+    transition: transform 0.2s ease;
+}
+
+.box:hover {
+    background-color: #FFA500;
+    /* Orange beim Hover */
+    transform: scale(1.05);
+    /* Leichtes Vergrößern */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Zwei Spalten */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* Vier Spalten */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .SonnenSystem,
+    .questions {
+        max-width: 45%;
+        /* Simulation und Fragen nehmen je 45% der Breite */
+    }
+}
+
+.quiz input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+
+.quiz button {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quiz button:hover {
+    background-color: #005bb5;
+}
+
+.quiz #result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+.Laptop {
+    display: flex;
+    /* Flexbox aktivieren */
+    flex-wrap: nowrap;
+    /* Inhalte sollen nebeneinander bleiben */
+    justify-content: space-between;
+    /* Abstand zwischen Simulation und Fragen */
+    align-items: flex-start;
+    /* Elemente oben ausrichten */
+    gap: 20px;
+    /* Abstand zwischen den beiden Elementen */
+    margin: 20px 0;
+    /* Abstand zum Rest der Seite */
+}
+
+.SonnenSystem {
+    flex: 1;
+    /* Simulation nimmt gleichen Platz wie die Fragen ein */
+    position: relative;
+    width: 400px;
+    max-width: 500px;
+    /* Begrenze die Breite der Simulation */
+    margin: 0 auto;
+    /* Zentriert das Element */
+}
+
+.Knopf {
+    margin-bottom: 10rem;
+}
+
+.sun {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    animation: rotate 10s linear infinite;
+}
+
+.sun img {
+    width: 100%;
+    border-radius: 50%;
+    /* Runde Form */
+    box-shadow: 0 0 30px 10px yellow;
+    /* Glüh-Effekt */
+}
+
+.earth-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.show-earth-orbit {
+    border: 2px dashed black;
+    /* Sichtbare Umlaufbahn */
+}
+
+.earth {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+}
+
+.earth img {
+    width: 100%;
+    border-radius: 50%;
+    /* Runde Erde */
+}
+
+.moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+
+.moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+}
+
+.moon img {
+    width: 100%;
+    border-radius: 50%;
+    /* Runde Mond */
+}
+
+/* Mobile Ansicht */
+@media (max-width: 768px) {
+    .Laptop {
+        flex-direction: column;
+        /* Inhalte untereinander anordnen */
+        align-items: center;
+        /* Zentriert die Inhalte horizontal */
+        gap: 100px;
+    }
+
+    .SonnenSystem {
+        width: 100%;
+        /* Die Simulation nimmt die volle Breite ein */
+        max-width: 300px;
+        /* Begrenze die maximale Breite */
+        margin: 0 auto 20px;
+        /* Zentriere die Simulation und füge Abstand ein */
+    }
+
+    .earth-orbit {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sun {
+        width: 50px;
+        height: 50px;
+        left: 50%;
+    }
+
+    .earth {
+        width: 25px;
+        height: 25px;
+    }
+
+    .moon-orbit {
+        width: 70px;
+        height: 70px;
+    }
+
+    .moon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .questions {
+        width: 100%;
+        /* Fragen nehmen die volle Breite ein */
+        max-width: 600px;
+        /* Optional: Breite der Fragen begrenzen */
+        margin: 0 auto;
+        /* Fragen zentrieren */
+    }
+}
+
+
+/* Animationen */
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.questions {
+    background-color: aquamarine;
+    border: #000 solid 2px;
+    border-radius: 2%;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+
+video {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Allgemeine Box für das Video und den Text */
+.moon-video-container {
+    display: flex;
+    /* Flexbox aktivieren */
+    flex-direction: column;
+    /* Standard: Video und Text untereinander */
+    align-items: center;
+    /* Zentriere Inhalte horizontal */
+    border: 2px solid #ddd;
+    /* Rahmen um die Box */
+    padding: 20px;
+    /* Innenabstand */
+    margin: 20px auto;
+    /* Zentrierung der Box */
+    max-width: 800px;
+    /* Maximale Breite */
+    border-radius: 10px;
+    /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Schatteneffekt */
+    background-color: #f9f9f9;
+    /* Heller Hintergrund */
+}
+
+/* Video-Styling */
+.moon-video-container video {
+    width: 100%;
+    /* Video füllt die Breite der Box aus */
+    border-radius: 10px;
+    /* Runde Ecken */
+    margin-bottom: 10px;
+    /* Abstand unter dem Video */
+}
+
+/* Text-Styling */
+.moon-video-container .video-description {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    /* Zentrierter Text */
+    -ms-flex-align: center;
+    margin: 10px 0;
+}
+
+/* Layout für größere Bildschirme */
+@media (min-width: 768px) {
+    .moon-video-container {
+        flex-direction: row;
+        /* Video und Text nebeneinander */
+        align-items: flex-start;
+        /* Oben ausrichten */
+        gap: 20px;
+        /* Abstand zwischen Video und Text */
+    }
+
+    .moon-video-container .video-description {
+        text-align: left;
+        /* Text linksbündig */
+        flex: 1;
+        /* Text nimmt verbleibenden Platz ein */
+    }
+
+    .moon-video-container video {
+        flex: 1;
+        /* Video nimmt verfügbaren Platz ein */
+        max-width: 50%;
+        /* Begrenzung der Videobreite */
+    }
+}

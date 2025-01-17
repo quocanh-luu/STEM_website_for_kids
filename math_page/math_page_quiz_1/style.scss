@@ -1,39 +1,47 @@
 @use "../../source/nav";
 
-body{
+body {
     font-family: "Fredoka", sans-serif;
     position: relative;
     background-color: #96ffbb;
-    #flowers-container{
+
+    #flowers-container {
         position: absolute;
         z-index: 100;
         pointer-events: none;
         opacity: 0;
         left: 5vw;
         top: 5vh;
-        iframe{
+
+        iframe {
             width: 90vw;
             height: 50vw;
         }
     }
-    .appear{
+
+    .appear {
         animation: appear 3s linear 1 forwards;
     }
+
     @keyframes appear {
-        from{
+        from {
             opacity: 0;
         }
-        40%{
+
+        40% {
             opacity: 1;
         }
-        60%{
+
+        60% {
             opacity: 1;
         }
-        to{
+
+        to {
             opacity: 0;
         }
     }
-    .question-container{
+
+    .question-container {
         opacity: 0;
         transition: opacity 0.5s ease;
         position: absolute;
@@ -46,22 +54,25 @@ body{
         background-color: #F0BB78;
         display: grid;
         grid-template-rows: 50vw 1fr 4fr 1fr;
-        grid-template-areas: 
-        "image"
-        "question"
-        "answer"
-        "button";
-        .img-container{
+        grid-template-areas:
+            "image"
+            "question"
+            "answer"
+            "button";
+
+        .img-container {
             grid-area: image;
             width: 90%;
             margin: 2rem auto;
             border: 5px solid #694714;
-            img{
+
+            img {
                 height: 100%;
                 width: 100%;
             }
         }
-        .question{
+
+        .question {
             grid-area: question;
             background-color: #694714;
             color: #fff;
@@ -73,15 +84,17 @@ body{
             border-radius: 5px;
             text-align: center;
         }
-        .answer{
+
+        .answer {
             //otherwise i have a 40px padding-left from user agent stylesheet
-            padding-left: 0;    
+            padding-left: 0;
             grid-area: answer;
             list-style: none;
             display: flex;
             justify-content: center;
             gap: 1rem;
-            li{
+
+            li {
                 cursor: pointer;
                 width: 3rem;
                 height: 3rem;
@@ -89,36 +102,44 @@ body{
                 line-height: 3rem;
                 border-radius: 5px;
             }
-            .false{
+
+            .false {
                 background-color: grey;
                 color: black;
                 animation: false 2s linear 1 forwards;
             }
+
             @keyframes false {
-                0%{
+                0% {
                     transform: translateX(0);
                     background-color: grey;
                 }
-                33%{
+
+                33% {
                     transform: translateX(-10%);
                 }
-                66%{
+
+                66% {
                     transform: translateX(10%);
                 }
-                99%{
+
+                99% {
                     background-color: grey;
                 }
-                100%{
+
+                100% {
                     transform: translateX(0);
                     background-color: initial;
                 }
             }
         }
-        .button-container{
+
+        .button-container {
             grid-area: button;
             display: flex;
             justify-content: space-between;
-            button{
+
+            button {
                 cursor: pointer;
                 width: 3.2rem;
                 height: 3.2rem;
@@ -129,37 +150,42 @@ body{
                 border-radius: 50%;
                 margin: 1rem;
             }
-            meter{
+
+            meter {
                 width: 50%;
                 height: 3rem;
                 margin-top: 1rem;
             }
         }
     }
-    .question-container.active{
+
+    .question-container.active {
         z-index: 1;
         opacity: 1;
     }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px){
-    body{
-        .question-container{
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    body {
+        .question-container {
             grid-template-rows: 1fr 5fr 3fr 1fr;
-            grid-template-areas: 
-            "question"
-            "image"
-            "answer"
-            "button";
-            .question{
+            grid-template-areas:
+                "question"
+                "image"
+                "answer"
+                "button";
+
+            .question {
                 width: 70%;
                 margin: 3% auto 0;
             }
-            .img-container{
-                   width: 70%; 
+
+            .img-container {
+                width: 70%;
             }
-            .answer{
-                li{
+
+            .answer {
+                li {
                     width: 5rem;
                     height: 3rem;
                     line-height: 3rem;
@@ -169,36 +195,38 @@ body{
     }
 }
 
-@media screen and (min-width: 769px){
-    body{
-        .question-container{
+@media screen and (min-width: 769px) {
+    body {
+        .question-container {
             grid-template-columns: 3fr 2fr;
             grid-template-rows: repeat(2, 4fr) 1fr;
-            grid-template-areas: 
-            "image question"
-            "image answer"
-            "button button";
-            .img-container{
+            grid-template-areas:
+                "image question"
+                "image answer"
+                "button button";
+
+            .img-container {
                 height: 70%;
                 margin-top: 10%;
             }
-            .question{
+
+            .question {
                 margin-top: 20%;
                 font-size: 1rem;
                 padding: 1rem 0;
             }
-            .answer{
+
+            .answer {
                 gap: 0;
                 width: 90%;
                 height: fit-content;
                 margin: 0 auto;
                 flex-wrap: wrap;
-                li{
+
+                li {
                     width: 50%;
                 }
             }
         }
     }
 }
-
-

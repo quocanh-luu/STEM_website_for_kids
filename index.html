@@ -8,10 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title> Welcome page - MINT entdecken | Die Welt von MINT </title>
 </head>
 <body>
+    <audio id="background-music" autoplay muted>
+        <source src="short_intro.flac" type="audio/flac">
+        <source src="short_intro.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
     <div class="title">
         <svg width="100vw" height="100vh" xmlns="http://www.w3.org/2000/svg">
             <!--our point is center of the page,
@@ -24,5 +31,13 @@
         </svg>
         <a href="homepage/index.html"><button>Los geht</button></a>
     </div>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        window.addEventListener('click', () => {
+            audio.muted = false; // Unmute audio on user interaction
+            audio.play();       // Ensure playback starts
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Naturwissenschaft </title>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Die Welt von MINT</h1>
+        <nav>
+            <details>
+                <summary>&#9776</summary>
+                <ul>
+                    <li><a href="../homepage/index.html">Home</a></li>
+                    <li><a href="../math_page/index.html">Mathe</a></li>
+                    <li><a href="../informatik_page/index.html">Informatik</a></li>
+                    <li><a class="active" href="#">Naturwissenschaft</a></li>
+                    <li><a href="../Technik/index.html">Technik</a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+
+    <h1 class="title">Naturwissenschaft</h1>
+
+    <section id="intro">
+        <h2>Was sind Naturwissenschaften?</h2>
+        <p>Die Naturwissenschaften untersuchen die Phänomene der Natur, von der Physik und Chemie bis hin zur
+            Biologie und Astronomie.</p>
+    </section>
+
+
+    <main>
+
+        <section class="grid-container">
+
+            <div class="box" id="nature">
+                <h2>Natur</h2>
+                <p style="display: none;">Erlebe die Schönheit und Vielfalt der Natur um dich herum!</p>
+            </div>
+
+            <div class="box" id="physics">
+                <h2>Physik</h2>
+                <p style="display: none;">Erfahre, wie Kräfte und Bewegung unsere Welt formen!</p>
+            </div>
+
+            <div class="box" id="chemistry">
+                <h2>Chemie</h2>
+                <p style="display: none;">Erkunde spannende Experimente und chemische Reaktionen!</p>
+            </div>
+
+            <div class="box" id="astronomy">
+                <h2>Astronomie</h2>
+                <p style="display: none;">Erkunde das Universum und seine unendlichen Weiten!</p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="interactive-section">
+            <div class="quiz">
+                <h3>Quiz: Elemente der Natur</h3>
+                <p>Gib eine Wetterart ein (z.B. Sonne, Regen, Schnee):</p>
+                <input type="text" id="weatherInput" placeholder="Wetterart eingeben">
+                <button id="submitWeather">Überprüfen</button>
+                <p id="result"></p>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <div class="Laptop">
+
+            <section class="SonnenSystem">
+                <div class="Knopf">
+                    <h4>Simulation des Sonnensystems</h4>
+                    <button id="toggle-earth-orbit">Umlaufbahn anzeigen</button>
+                </div>
+
+                <div class="sun">
+                    <img src="Sonne.jpg" alt="Sonne">
+                    <div class="earth-orbit">
+                        <div class="earth">
+                            <img src="erde.jpg" alt="Erde">
+                            <div class="moon-orbit">
+                                <div class="moon">
+                                    <img src="mond.jpg" alt="Mond">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <div class="questions">
+                <h2>Fragen</h2>
+                <div class="question">
+                    <p><b>Was fehlt noch?</b></p>
+                    <ul>
+                        <li><input type="radio" name="q1" id="q1a"><label for="q1a">Schwerkraft</label></li>
+                        <li><input type="radio" name="q1" id="q1b"><label for="q1b">Mars</label></li>
+                        <li><input type="radio" name="q1" id="q1c"><label for="q1c">Geschwindigkeit</label></li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <p><b>Was ist ein Jahr?</b></p>
+                    <ul>
+                        <li><input type="radio" name="q2" id="q2a"><label for="q2a">Eine Drehung der Erde um die
+                                Sonne</label></li>
+                        <li><input type="radio" name="q2" id="q2b"><label for="q2b">Eine Drehung des Mondes um die
+                                Erde</label></li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <p><b>Was ist eine Sonnenfinsternis?</b></p>
+                    <ul>
+                        <li><input type="radio" name="q3" id="q3a"><label for="q3a">Der Mond ist zwischen Erde und
+                                Sonne</label></li>
+                        <li><input type="radio" name="q3" id="q3b"><label for="q3b">Die Erde ist zwischen Sonne und
+                                Mond</label></li>
+                    </ul>
+                </div>
+                <button id="submitQuiz">Antworten überprüfen</button>
+
+            </div>
+        </div>
+
+        <section class="moon-video-section">
+            <div class="moon-video-container">
+                <video autoplay muted loop>
+                    <source src="mond.mp4" type="video/mp4">
+                    Dein Browser unterstützt dieses Video nicht.
+                </video>
+                <p class="video-description">
+                    Der Mond hat eine gebundene Rotation zur Erde.
+                    Das heißt wir sehen immer die selbe Seite des Mondes.
+                    Dieses Video zeigt dir die Dunkle Seite des Mondes </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Samuels Webseite</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="../source/nav.js"></script>
+</body>
+
+</html>

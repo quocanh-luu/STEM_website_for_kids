@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="MINT, Mathe, Informatik, Naturwissenschaft, Technik">
-    <meta name="description" content="Die Welt von MINT - Unsere Webseite bietet kindgerechte Experimente, Spiele und Lernmaterialien. Entdecke, staune und lerne – MINT macht Spaß!">
+    <meta name="description"
+        content="Die Welt von MINT - Unsere Webseite bietet kindgerechte Experimente, Spiele und Lernmaterialien. Entdecke, staune und lerne – MINT macht Spaß!">
+    <meta property="og:title" content="Entdecke die Welt von MINT!">
+    <meta property="og:description" content="Entdecke spannende Experimente, kreative Spiele und wertvolle Grundkenntnisse - MINT macht Spaß!">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <!--Font Awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <title> Homepage - Was ist MINT? | Die Welt von MINT </title>
 </head>
+
 <body>
     <header>
         <h1 id="title">Die Welt von MINT</h1>
@@ -18,16 +26,16 @@
                     <li><a class="active" href="#">Home</a></li>
                     <li><a href="../math_page/index.html">Mathe</a></li>
                     <li><a href="../informatik_page/index.html">Informatik</a></li>
-                    <li><a href="#">Naturwissenschaft</a></li>
-                    <li><a href="#">Technik</a></li>
+                    <li><a href="../Naturwissenschaft/index.html">Naturwissenschaft</a></li>
+                    <li><a href="../Technik/index.html">Technik</a></li>
                 </ul>
             </details>
         </nav>
     </header>
     <main>
-        <div class="hero-section">  <!--we actually dont need this div-->
+        <div class="hero-section">
             <div class="container" style="background-color:#FCC737;">
-                <details>    
+                <details>
                     <summary>M</summary>
                     <blockquote>
                         <i> "Mathematik ist die Sprache, in der Gott das Universum geschrieben hat."</i>
@@ -64,11 +72,12 @@
             </div>
         </div>
     </main>
-    <section class="definition">
-        <svg style="background-color: #282a35;" width="100%" height="10vw" xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 100 10" preserveAspectRatio="none">
+    <section class="subjects">
+        <svg style="background-color: #282a35;" width="100%" height="10vw" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -10 100 10" preserveAspectRatio="none">
             <!-- Filled curve -->
             <path d="M0,-1 C20,-7 60,5 100,-7 L100,1 L0,1 Z" fill="#d9eee1" />
-        </svg>              
+        </svg>
         <div class="mathe">
             <h1>Mathe</h1>
             <div class="img-container">
@@ -99,8 +108,51 @@
                 <li><a href="../informatik_page/index.html">Variablen</a></li>
             </ul>
         </div>
+        <div class="naturwissenschaft">
+            <h1>Wissenschaft</h1>
+            <div class="img-container">
+                <span class="b1"></span>
+                <span class="b2"></span>
+                <span class="b3"></span>
+                <img src="img/science.png" alt="science">
+            </div>
+            <ul class="intro">
+                <li><a href="../Naturwissenschaft/index.html">Natur</a></li>
+                <li><a href="../Naturwissenschaft/index.html">Physik</a></li>
+                <li><a href="../Naturwissenschaft/index.html">Chemie</a></li>
+                <li><a href="../Naturwissenschaft/index.html">Astronomie</a></li>
+            </ul>
+        </div>
+        <div class="technik">
+            <h1>Technik</h1>
+            <div class="img-container">
+                <span class="b1"></span>
+                <span class="b2"></span>
+                <span class="b3"></span>
+                <img src="img/gear_symbol.png" alt="gear_symbol">
+            </div>
+            <ul class="intro">
+                <li><a href="../Technik/index.html">Roboter</a></li>
+                <li><a href="../Technik/index.html">Maschinenbau</a></li>
+                <li><a href="../Technik/index.html">Electronik</a></li>
+                <li><a href="../Technik/index.html">Energiequellen</a></li>
+            </ul>
+        </div>
     </section>
 
+    
+    <footer class="social-share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://132web.site/project/explore/index.html" target="_blank">
+          <i class="fab fa-facebook" style="font-size: 32px; color: #4267B2;"></i>
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://132web.site/project/explore/index.html&text=Check%20this%20out!" target="_blank">
+          <i class="fab fa-twitter" style="font-size: 32px; color: #1DA1F2;"></i>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://132web.site/project/explore/index.html" target="_blank">
+          <i class="fab fa-linkedin" style="font-size: 32px; color: #0A66C2;"></i>
+        </a>
+    </footer>
+      
 
     <script src="../source/nav.js"></script>
     <script>
@@ -111,7 +163,7 @@
         details.forEach((detail) => {
             detail.addEventListener("toggle", () => {
                 if (detail.open) {
-                // Close all other <details> elements
+                    // Close all other <details> elements
                     details.forEach((otherDetail) => {
                         if (otherDetail !== detail) {
                             otherDetail.removeAttribute("open");
@@ -120,6 +172,9 @@
                 }
             });
         });
+
+        
     </script>
 </body>
+
 </html>

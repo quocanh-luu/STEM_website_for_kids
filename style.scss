@@ -15,7 +15,7 @@
     font-family: "Londrina Shadow", sans-serif;
     fill: transparent;
     stroke: var(--font-color);
-    stroke-width: 0.1rem;       //stroke is similar to outline
+    stroke-width: 0.1rem;       //stroke is similar to border
     stroke-dasharray: $stroke-dash;     //set length of each dash and gap equal to the length of the word
     stroke-dashoffset: $stroke-dash;    //set equal to dasharray so it first start outside the word => invisible
     animation: textAppear $animation-duration ease-in-out 1 forwards;

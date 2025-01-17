@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap");
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  line-height: 4rem;
+}
+header #title {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+header details summary {
+  list-style: none;
+  margin: 0 1rem;
+}
+header details ul {
+  list-style: none;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  left: 0;
+  top: 4rem;
+  position: absolute;
+  background: url(../source/background_in_space.webp);
+  background-position: 70%;
+}
+header details ul li {
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+header details ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  header #title {
+    font-size: 2.2rem;
+    margin: 0 2rem;
+  }
+  header details summary {
+    display: none;
+  }
+  header details ul {
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    background: none;
+    background-color: #fff;
+  }
+  header details ul li a {
+    color: #000;
+    transition: transform 0.5s ease;
+  }
+  header details ul li a:hover {
+    text-decoration: underline;
+    transform: translateY(-10%);
+  }
+  header details ul li a.active {
+    text-decoration: underline;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+
+main {
+  height: fit-content;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4rem 6rem 1.6rem repeat(4, auto);
+  grid-template-areas: "." "title" "sub-nav" "theme-1" "theme-2" "theme-3" "theme-4";
+}
+main .title {
+  position: relative;
+  grid-area: title;
+  width: 100%;
+  height: 6rem;
+  background-color: #7C00FE;
+}
+main .title img {
+  position: absolute;
+  width: 20%;
+  border-radius: 50%;
+  left: 8%;
+  bottom: 5%;
+}
+main .title span {
+  color: #fff;
+  padding: 3%;
+  position: absolute;
+  width: 65%;
+  top: 5%;
+  left: 30%;
+  border: 2px dashed #fff;
+  border-radius: 20%;
+}
+main .sub-navbar {
+  z-index: 10;
+  grid-area: sub-nav;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  overflow: scroll;
+  background-color: #FFAF00;
+  width: 100%;
+  padding: 0 1rem;
+  position: sticky;
+  top: 4rem;
+}
+main .sub-navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+main #theme-1 {
+  grid-area: theme-1;
+  display: flex;
+  flex-direction: column;
+  background-color: #d6f0ca;
+}
+main #theme-1 h3 {
+  text-align: center;
+  margin: 1rem;
+}
+main #theme-1 .opening {
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+main #theme-1 ul {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 7% 5% 12%;
+  border: 0.3rem solid #000;
+  border-radius: 10px;
+  background-color: #355F2E;
+  color: #fff;
+}
+main #theme-1 ul li {
+  margin-bottom: 0.8rem;
+  font-family: "Cabin Sketch", sans-serif;
+}
+main #theme-1 .ending {
+  text-align: center;
+  border: 0.15rem solid #000;
+  border-radius: 20% 10% 20% 10%/10% 20% 10% 20%;
+  width: 90%;
+  margin: 1rem auto 0;
+}
+main #theme-1 a {
+  text-align: center;
+  margin: 3rem auto 4rem;
+}
+main #theme-1 a button {
+  width: fit-content;
+  border: none;
+  background-color: #FCC737;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  animation: myAnimation linear 3s infinite;
+}
+@keyframes myAnimation {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+main #theme-2 {
+  grid-area: theme-2;
+  display: flex;
+  flex-direction: column;
+  background-color: #B7E0FF;
+}
+main #theme-2 h3 {
+  text-align: center;
+  margin: 1rem;
+}
+main #theme-2 .opening {
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+main #theme-2 ul {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 7% 5% 12%;
+  border: 0.3rem solid #000;
+  border-radius: 10px;
+  background-color: #355F2E;
+  color: #fff;
+}
+main #theme-2 ul li {
+  margin-bottom: 0.8rem;
+  font-family: "Cabin Sketch", sans-serif;
+}
+main #theme-2 .ending {
+  text-align: center;
+  border: 0.15rem solid #000;
+  border-radius: 20% 10% 20% 10%/10% 20% 10% 20%;
+  width: 90%;
+  margin: 1rem auto 0;
+}
+main #theme-2 a {
+  text-align: center;
+  margin: 3rem auto 4rem;
+}
+main #theme-2 a button {
+  width: fit-content;
+  border: none;
+  background-color: #F26B0F;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  animation: myAnimation linear 3s infinite;
+}
+@keyframes myAnimation {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+main #theme-3 {
+  grid-area: theme-3;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF5CD;
+}
+main #theme-3 h3 {
+  text-align: center;
+  margin: 1rem;
+}
+main #theme-3 .opening {
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+main #theme-3 ul {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 7% 5% 12%;
+  border: 0.3rem solid #000;
+  border-radius: 10px;
+  background-color: #355F2E;
+  color: #fff;
+}
+main #theme-3 ul li {
+  margin-bottom: 0.8rem;
+  font-family: "Cabin Sketch", sans-serif;
+}
+main #theme-3 .ending {
+  text-align: center;
+  border: 0.15rem solid #000;
+  border-radius: 20% 10% 20% 10%/10% 20% 10% 20%;
+  width: 90%;
+  margin: 1rem auto 0;
+}
+main #theme-3 a {
+  text-align: center;
+  margin: 3rem auto 4rem;
+}
+main #theme-3 a button {
+  width: fit-content;
+  border: none;
+  background-color: #E73879;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  animation: myAnimation linear 3s infinite;
+}
+@keyframes myAnimation {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+main #theme-3 .formen {
+  display: none;
+}
+main #theme-4 {
+  grid-area: theme-4;
+  display: flex;
+  flex-direction: column;
+  background-color: #F5DAD2;
+}
+main #theme-4 h3 {
+  text-align: center;
+  margin: 1rem;
+}
+main #theme-4 .opening {
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+main #theme-4 ul {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 7% 5% 12%;
+  border: 0.3rem solid #000;
+  border-radius: 10px;
+  background-color: #355F2E;
+  color: #fff;
+}
+main #theme-4 ul li {
+  margin-bottom: 0.8rem;
+  font-family: "Cabin Sketch", sans-serif;
+}
+main #theme-4 .ending {
+  text-align: center;
+  border: 0.15rem solid #000;
+  border-radius: 20% 10% 20% 10%/10% 20% 10% 20%;
+  width: 90%;
+  margin: 1rem auto 0;
+}
+main #theme-4 a {
+  text-align: center;
+  margin: 3rem auto 4rem;
+}
+main #theme-4 a button {
+  width: fit-content;
+  border: none;
+  background-color: #7E1891;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  animation: myAnimation linear 3s infinite;
+}
+@keyframes myAnimation {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767.9px) {
+  main {
+    grid-template-rows: 4rem 8rem 1.6rem repeat(4, auto);
+  }
+  main .title {
+    height: 8rem;
+  }
+  main .sub-navbar {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023.9px) {
+  main {
+    grid-template-rows: 4rem 12rem 2rem repeat(4, auto);
+  }
+  main .title {
+    height: 12rem;
+    font-size: 2rem;
+  }
+  main .sub-navbar {
+    justify-content: center;
+    font-size: 1.5rem;
+    gap: 4rem;
+  }
+  main a button {
+    font-size: 1.1rem;
+    padding: 0.8rem 3rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 4rem 10rem repeat(4, auto);
+    grid-template-areas: ". ." "title title" "sub-nav theme-1" "sub-nav theme-2" "sub-nav theme-3" "sub-nav theme-4";
+  }
+  main .title {
+    height: 10rem;
+  }
+  main .title img {
+    width: 12%;
+  }
+  main .title span {
+    left: 25%;
+    font-size: 2rem;
+    text-align: center;
+  }
+  main .sub-navbar {
+    overflow: hidden;
+    flex-direction: column;
+    padding-top: 4rem;
+    gap: 4rem;
+    height: calc(100vh - 4rem);
+  }
+  main .sub-navbar a {
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  main .sub-navbar a:hover {
+    transform: scale(1.4);
+  }
+  main #theme-1, main #theme-2 {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  main #theme-1 > div, main #theme-2 > div {
+    width: 33.3333333333%;
+    height: fit-content;
+  }
+  main #theme-1 a, main #theme-2 a {
+    flex-basis: 20%;
+    margin: 3rem auto 4rem;
+  }
+  main #theme-1 a button, main #theme-2 a button {
+    padding: 0.8rem 2rem;
+  }
+  main #theme-3 {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  main #theme-3 > div {
+    width: 100%;
+    height: fit-content;
+  }
+  main #theme-3 a {
+    flex-basis: 20%;
+    margin: 3rem auto 4rem;
+  }
+  main #theme-3 a button {
+    padding: 0.8rem 2rem;
+  }
+  main #theme-3 ul {
+    position: relative;
+  }
+  main #theme-3 ul .formen {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+  }
+  main #theme-3 ul .formen > * {
+    margin-bottom: 0.6rem;
+  }
+  main #theme-3 ul .formen .circle {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+  main #theme-3 ul .formen .square {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+  }
+  main #theme-3 ul .formen .rectangle {
+    width: 35px;
+    height: 25px;
+    border: 2px solid #fff;
+  }
+  main #theme-3 ul .formen .triangle {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  main #theme-3 ul .formen .triangle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 10;
+    background-color: #355F2E;
+  }
+  main #theme-4 {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  main #theme-4 > div {
+    width: 50%;
+    height: fit-content;
+  }
+  main #theme-4 a {
+    flex-basis: 20%;
+    margin: 3rem auto 4rem;
+  }
+  main #theme-4 a button {
+    padding: 0.8rem 2rem;
+  }
+  main #theme-4 .opening {
+    padding-left: 2ch;
+  }
+}
+.autoShow *:not(a) {
+  animation: autoShowAnimation;
+  animation-timeline: view(80% 5%);
+  animation-fill-mode: both;
+}
+
+@keyframes autoShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
