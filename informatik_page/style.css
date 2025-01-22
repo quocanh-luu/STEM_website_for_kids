@@ -103,18 +103,15 @@ main {
 #game {
   grid-area: game;
   position: relative;
-  width: fit-content;
   margin: 2.4rem auto;
   border: none;
   border-radius: 0.5rem;
   background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
   overflow: hidden;
-}
-#game a {
   color: #fff;
-  text-decoration: none;
   padding: 0 3rem;
 }
+
 #game::before {
   content: "";
   position: absolute;

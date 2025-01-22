@@ -359,6 +359,7 @@ footer nav ul li a {
 }
 
 .robo iframe {
+    border: none; /*zum Erzetzen frameborder = "0"*/
     width: auto;
     max-width: 80%;
     height: auto;

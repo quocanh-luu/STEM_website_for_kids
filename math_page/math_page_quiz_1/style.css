@@ -13,6 +13,7 @@ body {
     left: 5vw;
 }
 iframe {
+    border: none;
     width: 90vw;
     height: 35vh;
 }

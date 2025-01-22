@@ -14,7 +14,7 @@
         <h1 id="title">Die Welt von MINT</h1>
         <nav>
             <details>
-                <summary>&#9776</summary>
+                <summary>&#9776;</summary>
                 <ul>
                     <li><a href="../homepage/index.html">Home</a></li>
                     <li><a href="../math_page/index.html">Mathe</a></li>
@@ -27,9 +27,7 @@
     </header>
     <main>
         <div id="typing-text"></div>
-        <button id="game">
-            <a href="game/index.html" target="_blank">Jetzt probieren!</a>
-        </button>
+        <button id="game" onclick="window.open('game/index.html', '_blank')">Jetzt probieren!</button>
         <!--Definition-->
         <div class="section section-1">
             <h2>Was ist Programmierung?</h2>
@@ -46,7 +44,7 @@
             <p class="sub-title">Eine Schleife wiederholt eine Anweisung immer wieder. Zum Beispiel: Wenn du möchtest, dass der Computer 10 Mal "Hallo" sagt, kannst du eine Schleife verwenden:</p>
             <div class="code-example">
                 <code>
-                für (i = 1; i <= 10; i++) {<br>
+                für (i = 1; i &lt;= 10; i++) {<br>
                     console.log("Hallo");<br>
                 }
                 </code>

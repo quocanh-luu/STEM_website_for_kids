@@ -20,6 +20,7 @@ body {
   inset: 0;
 }
 iframe {
+  border: none;
   width: 100vw;
   height: 100vh;
 }
