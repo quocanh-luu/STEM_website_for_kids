@@ -13,4 +13,4 @@ Das Design ist modern, responsiv und SEO-optimiert. Verschiedene Grid-Layouts ko
 - Saubere, modulare und erweiterbare Code-Struktur  
 
 ## Autor: Quoc Anh Luu
-# Erstellt: 11.2024
+### Erstellt: 11.2024
